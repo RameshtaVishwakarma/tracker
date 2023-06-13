@@ -1,12 +1,18 @@
-// Retrieve the current counter values from localStorage (if available)
+// Counter values object
 const counters = {
-  rc: localStorage.getItem("rc-counter") || "0",
-  cr: localStorage.getItem("cr-counter") || "0",
-  quants: localStorage.getItem("quants-counter") || "0",
-  dilr: localStorage.getItem("dilr-counter") || "0",
+  rc: getCounterValue('rc'),
+  cr: getCounterValue('cr'),
+  quants: getCounterValue('quants'),
+  dilr: getCounterValue('dilr'),
+  mocks: getCounterValue('mocks')
 };
 
-// Function to update the counter value and store it in localStorage
+// Function to get counter value from localStorage
+function getCounterValue(category) {
+  return parseInt(localStorage.getItem(`${category}-counter`)) || 0;
+}
+
+// Function to update the counter value in localStorage
 function updateCounter(category, value) {
   counters[category] = value;
   localStorage.setItem(`${category}-counter`, value);
@@ -31,7 +37,6 @@ function decrementCounter(category) {
 }
 
 // Initialize the counters with their initial values
-Object.keys(counters).forEach((category) => {
-  document.getElementById(`${category}-counter`).textContent =
-    counters[category];
+Object.keys(counters).forEach(category => {
+  document.getElementById(`${category}-counter`).textContent = counters[category];
 });

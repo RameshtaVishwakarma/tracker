@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tracker Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Circular+Std:400,500&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Tracker Dashboard</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="section">
+          <h2>Reading Comprehension</h2>
+          <div class="counter">
+            <span id="rc-counter">0</span>
+            <button onclick="incrementCounter('rc')">+</button>
+            <button onclick="decrementCounter('rc')">-</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>CR Questions</h2>
+          <div class="counter">
+            <span id="cr-counter">0</span>
+            <button onclick="incrementCounter('cr')">+</button>
+            <button onclick="decrementCounter('cr')">-</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Quants</h2>
+          <div class="counter">
+            <span id="quants-counter">0</span>
+            <button onclick="incrementCounter('quants')">+</button>
+            <button onclick="decrementCounter('quants')">-</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>DILR</h2>
+          <div class="counter">
+            <span id="dilr-counter">0</span>
+            <button onclick="incrementCounter('dilr')">+</button>
+            <button onclick="decrementCounter('dilr')">-</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Mocks</h2>
+          <div class="counter">
+            <span id="mocks-counter">0</span>
+            <button onclick="incrementCounter('mocks')">+</button>
+            <button onclick="decrementCounter('mocks')">-</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
